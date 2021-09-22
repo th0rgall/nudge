@@ -2,7 +2,7 @@ execSettings();
 
 async function execSettings() {
   let settings = await loadSettingsRequest();
-  let hideesSync = await loadHideesRequest();
+  // let hideesSync = await loadHideesRequest();
   // Check for snooze
   let dontNudge = checkSnoozeAndSchedule(settings);
   if (dontNudge) {
@@ -40,7 +40,8 @@ async function execSettings() {
       {
         log,
         // supportLink: getUrl("html/pages/support.html"),
-        hidees: hideesSync || hideesStore,
+        // hidees: hideesSync || hideesStore,
+        hidees:  hideesStore,
         excludedHidees: settings.unhidden_hidees
           ? settings.unhidden_hidees
           : [],

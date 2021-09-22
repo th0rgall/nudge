@@ -26,7 +26,7 @@ async function run(userType) {
   // Update local settings
   settingsLocal = settings
   // Get hidees
-  hideesSync = await checkHidees()
+  // hideesSync = await checkHidees()
 
   // First off, initialise Amplitude
   if (settingsLocal.share_data) {
